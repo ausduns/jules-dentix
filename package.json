@@ -1,0 +1,8 @@
+{
+  "name": "jules-dentix",
+  "version": "1.0.0",
+  "description": "Dentix clone",
+  "scripts": {
+    "dev": "npx serve -l 3000"
+  }
+}
