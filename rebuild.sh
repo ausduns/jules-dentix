@@ -1,0 +1,272 @@
+#!/bin/bash
+
+# Base
+cat << 'HTML_EOF' > index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dentix</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#0252D3',
+                            dark: '#111827',
+                            gray: '#F3F4F6',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @font-face { font-family: "Inter"; src: url("https://framerusercontent.com/assets/2L5u6y7U0GfMBN1iG4TqP0k.woff2") format("woff2"); font-weight: 300; font-style: normal; }
+        @font-face { font-family: "Inter"; src: url("https://framerusercontent.com/assets/jL2d9lqU9LPEzJtVpS19UqJ25s.woff2") format("woff2"); font-weight: 400; font-style: normal; }
+        @font-face { font-family: "Inter"; src: url("https://framerusercontent.com/assets/fX498pXN5N3mSgE4T9v4oQh4g.woff2") format("woff2"); font-weight: 500; font-style: normal; }
+        @font-face { font-family: "Inter"; src: url("https://framerusercontent.com/assets/sTj4T31vY8Qp3B8g4tZk0hM.woff2") format("woff2"); font-weight: 600; font-style: normal; }
+        @font-face { font-family: "Inter"; src: url("https://framerusercontent.com/assets/ZEXB4Bq1Ew4r8Q2m3t5vG2m4.woff2") format("woff2"); font-weight: 700; font-style: normal; }
+        @font-face { font-family: "Inter"; src: url("https://framerusercontent.com/assets/8z0K0B8t5u0O8O3a5rX2oQ4U.woff2") format("woff2"); font-weight: 800; font-style: normal; }
+        body { font-family: 'Inter', sans-serif; background-color: #F3F4F6; }
+    </style>
+</head>
+<body class="antialiased bg-[#f3f4f6]">
+    <div id="app" class="flex flex-col items-center min-h-screen">
+        
+        <!-- Main Navigation -->
+        <header class="fixed top-0 left-0 right-0 z-50 flex justify-center w-full pt-3 px-3">
+            <nav class="w-full max-w-[1200px] bg-white rounded-2xl flex flex-row items-center justify-between py-3 px-6 shadow-sm">
+                <!-- Logo -->
+                <a href="#" class="flex items-center">
+                    <img src="./assets/images/6tTbkXggWgQCAJ4DO2QEdXXmgM.svg" alt="Dentix Logo" class="h-8">
+                </a>
+                <!-- Nav Links -->
+                <div class="hidden md:flex flex-row items-center gap-6">
+                    <a href="#" class="text-black font-medium text-base hover:opacity-80 transition-opacity">Home</a>
+                    <a href="#" class="text-black font-medium text-base hover:opacity-80 transition-opacity">Services</a>
+                    <a href="#" class="text-black font-medium text-base hover:opacity-80 transition-opacity">Our Clinic</a>
+                    <a href="#" class="text-black font-medium text-base hover:opacity-80 transition-opacity">Dentists</a>
+                    <a href="#" class="text-black font-medium text-base hover:opacity-80 transition-opacity">News</a>
+                </div>
+                <!-- Call to Action -->
+                <div class="hidden md:flex flex-row items-center gap-4">
+                    <a href="#" class="text-black font-medium text-base flex items-center gap-2 hover:opacity-80 transition-opacity">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        (310) 902-8328
+                    </a>
+                    <a href="#" class="bg-[#0252D3] text-white font-semibold text-sm py-3 px-5 rounded-full hover:bg-blue-700 transition-colors">
+                        Book Online
+                    </a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="w-full max-w-[1200px] flex flex-col items-center pt-24 px-3 pb-3">
+            
+            <!-- Hero Section -->
+            <section class="w-full h-[689px] relative rounded-[20px] overflow-hidden flex flex-col justify-between p-12">
+                <!-- Background Image -->
+                <img src="./assets/images/cGJTFi5lidEhnDZg7TnGv2ugo.jpg" alt="Hero Background" class="absolute inset-0 w-full h-full object-cover z-0">
+                <!-- Gradient Overlay -->
+                <div class="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent z-10"></div>
+
+                <!-- Top content inside Hero -->
+                <div class="relative z-20 max-w-[588px] flex flex-col gap-6 pt-10">
+                    <h1 class="text-white text-[72px] font-semibold leading-[1.1] tracking-tight">
+                        Premium Implant Dentistry Clinic
+                    </h1>
+                    <p class="text-white text-lg font-normal leading-relaxed opacity-90 max-w-[480px]">
+                        From subtle enhancements to full reconstructions, we specialize in restoring healthy smiles with care that fits you.
+                    </p>
+                    <div>
+                        <a href="#" class="inline-block bg-[#0252D3] text-white font-semibold text-base py-4 px-8 rounded-full hover:bg-blue-700 transition-colors">
+                            Book Online
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Bottom content inside Hero (Reviews) -->
+                <div class="relative z-20 flex flex-row items-center gap-4 mt-auto">
+                    <!-- Avatars -->
+                    <div class="flex -space-x-3">
+                        <img src="./assets/images/gfKDEeDTH0gNXnMcLZHSxVUqFKI.png" class="w-9 h-9 rounded-full border-2 border-[#1E1E1E]">
+                        <img src="./assets/images/4HytcC5SH5wppXFXnFHsYwunVHM.png" class="w-9 h-9 rounded-full border-2 border-[#1E1E1E]">
+                        <img src="./assets/images/kLPW7o56Zt8gw0D96XHDliaFNM.png" class="w-9 h-9 rounded-full border-2 border-[#1E1E1E]">
+                        <img src="./assets/images/iYjcCRZeo67UEB1OUxgbZyT2ig.png" class="w-9 h-9 rounded-full border-2 border-[#1E1E1E]">
+                    </div>
+                    <!-- Rating -->
+                    <div class="flex flex-col">
+                        <div class="flex items-center gap-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <span class="text-white font-semibold text-base">4.8</span>
+                        </div>
+                        <span class="text-white/80 font-medium text-sm">168 Reviews on Google</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Us Section -->
+            <section class="w-full flex flex-col md:flex-row gap-12 py-24">
+                <!-- Left Column -->
+                <div class="flex flex-col gap-6 w-full md:w-1/3">
+                    <span class="text-black font-medium text-base">About Us</span>
+                    <div class="flex items-center gap-2 mb-2">
+                        <div class="flex -space-x-3">
+                            <img src="./assets/images/xBinvsBPHdrJhiPbW9akV8SeqzQ.jpg" class="w-12 h-[69px] object-cover rounded-[10px] border-2 border-white relative z-[4]">
+                            <img src="./assets/images/7WvH9IVZN7TSclUrg1hD8pb3CA.jpg" class="w-12 h-[69px] object-cover rounded-[10px] border-2 border-white relative z-[3]">
+                            <img src="./assets/images/ieen5xkYGhBCNANZel7RzqQvcA.jpg" class="w-12 h-[69px] object-cover rounded-[10px] border-2 border-white relative z-[2]">
+                            <img src="./assets/images/3umss5aXSuyxhV3HlNsoyzWV2o.jpg" class="w-12 h-[69px] object-cover rounded-[10px] border-2 border-white relative z-[1]">
+                        </div>
+                    </div>
+                    <div>
+                        <h5 class="text-black text-2xl font-semibold">20+</h5>
+                        <p class="text-gray-500 text-sm font-medium">Years of experience</p>
+                    </div>
+                </div>
+                <!-- Right Column -->
+                <div class="flex flex-col gap-10 w-full md:w-2/3">
+                    <h2 class="text-[40px] font-semibold leading-[1.2] text-black tracking-tight">
+                        <span class="text-[#5B7A12]">Dentix</span> is a restorative dental practice built around implants, prosthetics, and full reconstruction for cases that demand surgical precision.
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8">
+                        <div class="flex flex-col gap-3">
+                            <p class="text-black text-xl font-medium">Specialist-led precision</p>
+                            <p class="text-gray-500 text-base leading-relaxed">Planned and performed by dedicated experts in implantology and restorative dentistry.</p>
+                        </div>
+                        <div class="flex flex-col gap-3">
+                            <p class="text-black text-xl font-medium">Unhurried consultations</p>
+                            <p class="text-gray-500 text-base leading-relaxed">Your case is studied thoroughly before any treatment begins.</p>
+                        </div>
+                        <div class="flex flex-col gap-3">
+                            <p class="text-black text-xl font-medium">Full transparency</p>
+                            <p class="text-gray-500 text-base leading-relaxed">Clear pricing, honest timelines, and no surprises throughout your journey.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Visit Our Clinic Section -->
+            <section class="w-full h-[400px] flex flex-row gap-5 mb-24">
+                <div class="w-[686px] h-full relative rounded-[20px] overflow-hidden">
+                    <img src="./assets/images/j03xXGomRywRGkD3sLeU8B4wCE.jpg" alt="Clinic Interior" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute bottom-6 left-6 right-6">
+                        <p class="text-white text-[32px] font-semibold leading-tight max-w-[300px]">
+                            Visit Our Clinic
+                        </p>
+                    </div>
+                </div>
+                <div class="flex-1 bg-black rounded-[20px] p-8 flex flex-col justify-between relative overflow-hidden">
+                    <img src="./assets/images/1gXLHzwx9XdhUodHBIuXNEqNhUo.png" alt="Sparkle Icon" class="absolute top-8 right-8 w-[63px] h-[54px] opacity-20">
+                    <div class="relative z-10 flex flex-col gap-4">
+                        <h3 class="text-white text-[32px] font-semibold leading-[1.2] max-w-[400px]">
+                            Your first consultation is free of charge
+                        </h3>
+                        <p class="text-white/80 text-base font-medium max-w-[380px] leading-relaxed">
+                            Book a consultation today. We'd love to give you a reason to smile more ;)
+                        </p>
+                    </div>
+                    <div class="relative z-10">
+                        <a href="#" class="inline-block bg-[#0252D3] text-white font-semibold text-base py-4 px-8 rounded-full hover:bg-blue-700 transition-colors">
+                            Book Online
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Section -->
+            <section class="w-full py-24 border-t border-gray-200">
+                <div class="flex flex-col md:flex-row gap-12">
+                    <div class="flex flex-col w-full md:w-1/3">
+                        <div class="sticky top-32 flex flex-col items-start gap-8">
+                            <h2 class="text-black text-5xl font-semibold leading-[1.1] tracking-tight">
+                                Expert Dental Treatments
+                            </h2>
+                            <a href="#" class="inline-block bg-black text-white font-semibold text-base py-4 px-8 rounded-full hover:bg-gray-800 transition-colors">
+                                All Services
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col w-full md:w-2/3">
+                        <div class="flex flex-row items-start gap-6 py-8 border-b border-gray-200 first:pt-0">
+                            <img src="./assets/images/6LBROq6GOOys2qu2z60WDoz6AA.jpg" class="w-[77px] h-[72px] object-cover rounded-2xl">
+                            <div class="flex flex-col gap-2">
+                                <h3 class="text-black text-2xl font-medium">Dental implants</h3>
+                                <p class="text-gray-600 text-base">Single tooth implants, full-arch restoration, All-on-4, bone grafting, sinus lifts.</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-row items-start gap-6 py-8 border-b border-gray-200">
+                            <img src="./assets/images/e4TaBKcmMuzFewiAC6EuA6JNo.jpg" class="w-[77px] h-[72px] object-cover rounded-2xl">
+                            <div class="flex flex-col gap-2">
+                                <h3 class="text-black text-2xl font-medium">Dental veneers</h3>
+                                <p class="text-gray-600 text-base">Porcelain veneers, composite veneers, smile makeovers, tooth shaping.</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-row items-start gap-6 py-8 border-b border-gray-200">
+                            <img src="./assets/images/P6pXMPp8EoyN3b5qRDTR07iCig.jpg" class="w-[77px] h-[72px] object-cover rounded-2xl">
+                            <div class="flex flex-col gap-2">
+                                <h3 class="text-black text-2xl font-medium">Dental prosthetics</h3>
+                                <p class="text-gray-600 text-base">Crowns, bridges, full and partial dentures, overdentures, implant-supported prosthetics.</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-row items-start gap-6 py-8 border-b border-gray-200">
+                            <img src="./assets/images/CpXHfDkfgNXs7CORGHQB6mzGBII.jpg" class="w-[77px] h-[72px] object-cover rounded-2xl">
+                            <div class="flex flex-col gap-2">
+                                <h3 class="text-black text-2xl font-medium">Dental treatment</h3>
+                                <p class="text-gray-600 text-base">Fillings, root canals, extractions, decay removal, cavity protection.</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-row items-start gap-6 py-8 border-b border-gray-200">
+                            <img src="./assets/images/yJPCsqrs1i5cOKZ17YBfalZLmnk.jpg" class="w-[77px] h-[72px] object-cover rounded-2xl">
+                            <div class="flex flex-col gap-2">
+                                <h3 class="text-black text-2xl font-medium">Teeth whitening</h3>
+                                <p class="text-gray-600 text-base">In-clinic bleaching, take-home whitening kits, shade correction, stain removal.</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-row items-start gap-6 py-8">
+                            <img src="./assets/images/qRIJVKyrAUrQLBD83Uo4eOXd2Fg.jpg" class="w-[77px] h-[72px] object-cover rounded-2xl">
+                            <div class="flex flex-col gap-2">
+                                <h3 class="text-black text-2xl font-medium">Dental hygiene</h3>
+                                <p class="text-gray-600 text-base">Professional cleanings, plaque and tartar removal, fluoride treatments, gum assessments.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonial Section -->
+            <section class="w-full flex flex-col md:flex-row gap-8 py-24">
+                <!-- Image -->
+                <div class="w-full md:w-1/2 flex items-center justify-center">
+                    <img src="./assets/images/rzlzHy3I6STZ9IgJLALZ6E7wnY.jpg" alt="Happy Patient" class="w-[512px] h-[624px] object-cover rounded-3xl">
+                </div>
+                <!-- Testimonial Content -->
+                <div class="w-full md:w-1/2 bg-[#0252D3] rounded-3xl p-12 flex flex-col justify-between">
+                    <div class="flex flex-col gap-6">
+                        <h2 class="text-white text-[32px] leading-tight font-medium">
+                            "A truly exceptional clinic. The staff is welcoming, and Dr. Davis made sure I was comfortable the whole visit. They didn't rush anything. Every option was explained clearly."
+                        </h2>
+                        <p class="text-white text-lg opacity-90">
+                            – Sara, 57
+                        </p>
+                    </div>
+                    <div class="flex flex-row gap-3 pt-12 flex-wrap">
+                        <span class="border border-white/30 text-white rounded-full px-4 py-2 text-sm">Dental implants</span>
+                        <span class="border border-white/30 text-white rounded-full px-4 py-2 text-sm">Crowns</span>
+                        <span class="border border-white/30 text-white rounded-full px-4 py-2 text-sm">Whitening</span>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+</body>
+</html>
+HTML_EOF
